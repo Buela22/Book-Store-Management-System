@@ -1,6 +1,6 @@
 const express = require('express');
 const session = require('express-session');
-const port = 7000;
+const port = 2000;
 const app = express();
 const path = require('path');
 const db = require('./config/db.js');

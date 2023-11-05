@@ -9,7 +9,7 @@ const bcrypt = require('bcrypt');
 exports.getAllBooks = async(req,res)=>{
     try{
         if(!req.session.user){
-            return res.send("First Enter your login credential to access to all books");
+            return res.send("Enter your login credential to access to all books");
         }
         if(req.session.user.isAdmin==false){
             return res.send("Only Admins can access to all books");
@@ -60,7 +60,7 @@ exports.getLogin = async(req,res)=>{
 exports.getAddBook = async(req,res)=>{
     try{
         if(!req.session.user){
-            return res.send("First Enter your login credential to access to adding books");
+            return res.send("Enter your login credential to access to adding books");
         }
         if(req.session.user.isAdmin==false){
             return res.send("Only Admins can access to these page");
